@@ -1,5 +1,4 @@
 
-"""le script de test"""
 
 from compteur_page import CompteurPage
 
