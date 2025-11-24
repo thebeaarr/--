@@ -1,14 +1,14 @@
 from datetime import datetime
 
 class CompteBancaire:
-    _compteur_id = 1  # identifiant unique auto-incrémenté
+    _compteur_id = 1
 
     def __init__(self, solde_initial=0.0):
         self.__id = CompteBancaire._compteur_id
         CompteBancaire._compteur_id += 1
 
         self.__solde = solde_initial
-        self.__operations = []  # historique des opérations
+        self.__operations = []
 
     def deposer(self, montant):
         if montant > 0:
@@ -40,7 +40,7 @@ class CompteBancaire:
 class Client:
     def __init__(self, nom):
         self.nom = nom
-        self.comptes = []  # liste de comptes
+        self.comptes = []
 
     def ajouter_compte(self, compte: CompteBancaire):
         self.comptes.append(compte)
